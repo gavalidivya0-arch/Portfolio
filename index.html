@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[YOUR NAME] | [YOUR PROFESSIONAL TITLE]</title>
+    <meta name="description" content="[YOUR BIO OR SHORT DESCRIPTION FOR SEO]">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons (Requested by Reference) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress"></div>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">[YOUR NAME]</a>
+
+            <div class="menu-icon" id="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#contact" class="nav-link">Contact</a>
+
+                <!-- Theme Toggle Native to our constraints -->
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero section">
+            <div class="container hero-container">
+                <div class="hero-content reveal">
+                    <p class="greeting">Hi, I'm</p>
+                    <h1 class="name">
+                        <span class="typewriter">[YOUR NAME]</span>
+                    </h1>
+                    <h2 class="role">[YOUR PROFESSIONAL TITLE]</h2>
+                    <p class="intro">
+                        [YOUR BIO - e.g., I create meaningful digital experiences through technology, creativity, and
+                        problem-solving, specializing in modern interactive architectures.]
+                    </p>
+                    <div class="cta-group">
+                        <a href="#projects" class="btn btn-primary magnetic-btn">View My Work</a>
+                        <a href="#contact" class="btn btn-outline magnetic-btn">Contact Me</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="[GITHUB URL]" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="[LINKEDIN URL]" target="_blank" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="[TWITTER URL]" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="assets/resume/[YOUR_RESUME].pdf" target="_blank" aria-label="Resume"
+                            title="Download Resume"><i class="fas fa-file-download"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image reveal delay-1">
+                    <div class="image-placeholder profile-placeholder">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Profile<br>Image</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section bg-light">
+            <div class="container">
+                <h2 class="section-title reveal">About Me</h2>
+                <div class="about-content reveal">
+                    <div class="about-text">
+                        <p>I am a passionate technology enthusiast based in [LOCATION], focusing on software
+                            engineering, performance optimization, and premium user experiences.</p>
+                        <p>Currently, I am heavily focused on continuously developing my technical and problem-solving
+                            skills to prepare for professional opportunities and build real-world applications that make
+                            a difference.</p>
+
+                        <div class="about-stats mt-3">
+                            <div class="stat-item">
+                                <h4 class="counter" data-target="3">0</h4>
+                                <p>Years Exp</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4 class="counter" data-target="15">0</h4>
+                                <p>Projects</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4 class="counter" data-target="20">0</h4>
+                                <p>Tools</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-bullseye highlight-icon"></i>
+                            <div>
+                                <h3>Personal Mission</h3>
+                                <p>Leveraging tech to solve real-world problems.</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-laptop-code highlight-icon"></i>
+                            <div>
+                                <h3>Roles</h3>
+                                <p>Software Engineer</p>
+                                <p class="text-sm">Full-Stack & UX Design</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-map-marker-alt highlight-icon"></i>
+                            <div>
+                                <h3>Location</h3>
+                                <p>[CITY, COUNTRY]</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section">
+            <div class="container">
+                <h2 class="section-title reveal">Technical Skills</h2>
+                <div class="skills-grid reveal">
+
+                    <div class="skill-category">
+                        <h3><i class="fas fa-code"></i> Frontend & UI</h3>
+                        <div class="skill-tags">
+                            <span class="tag"><i class="fab fa-html5"></i> HTML5</span>
+                            <span class="tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                            <span class="tag"><i class="fab fa-js"></i> JavaScript</span>
+                            <span class="tag"><i class="fas fa-mobile-alt"></i> Responsive</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fas fa-laptop-code"></i> Programming</h3>
+                        <div class="skill-tags">
+                            <span class="tag"><i class="fab fa-python"></i> Python</span>
+                            <span class="tag"><i class="fab fa-java"></i> Java</span>
+                            <span class="tag"><i class="fas fa-c"></i> C++</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fas fa-tools"></i> Tools</h3>
+                        <div class="skill-tags">
+                            <span class="tag"><i class="fab fa-git-alt"></i> Git</span>
+                            <span class="tag"><i class="fab fa-github"></i> GitHub</span>
+                            <span class="tag"><i class="fas fa-file-code"></i> VS Code</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fas fa-lightbulb"></i> Other Skills</h3>
+                        <div class="skill-tags">
+                            <span class="tag"><i class="fas fa-paint-brush"></i> UI/UX Design</span>
+                            <span class="tag"><i class="fas fa-users"></i> Teamwork</span>
+                            <span class="tag"><i class="fas fa-puzzle-piece"></i> Problem Solving</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section (Including Featured Project Layout constraint) -->
+        <section id="projects" class="projects section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">Portfolio Works</span>
+                    <h2 class="section-title reveal">Projects</h2>
+                </div>
+
+                <!-- Featured Project mapped to main-project-card reference -->
+                <div class="main-project-card reveal">
+                    <div class="main-project-icon" aria-hidden="true">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Featured Case Study: [PROJECT NAME]</h3>
+                    <p>[Detailed Project Description. Example: Developed a comprehensive enterprise dashboard solving X
+                        by doing Y.]</p>
+
+                    <div class="project-tags mt-3">
+                        <span class="project-tag">Problem Solving</span>
+                        <span class="project-tag">API Integration</span>
+                        <span class="project-tag">Optimization Result: 50%</span>
+                    </div>
+
+                    <div class="cta-group" style="justify-content: center; margin-top: 2rem;">
+                        <a href="[GITHUB LINK]" class="btn btn-primary"><i class="fab fa-github"></i> Source</a>
+                        <a href="[LIVE LINK]" class="btn btn-outline"><i class="fas fa-external-link-alt"></i> Live
+                            Demo</a>
+                    </div>
+                </div>
+
+                <h3 class="subsection-title reveal" style="text-align: center;">Selected Works</h3>
+
+                <div class="project-filters reveal" style="text-align: center; margin-bottom: 2rem;">
+                    <button class="btn btn-outline filter-btn active" data-filter="all">All</button>
+                    <button class="btn btn-outline filter-btn" data-filter="web">Web Dev</button>
+                    <button class="btn btn-outline filter-btn" data-filter="js">JavaScript</button>
+                </div>
+
+                <div class="projects-grid reveal">
+
+                    <div class="project-card" data-category="web">
+                        <div class="project-card-top">
+                            <span class="project-icon"><i class="fas fa-globe"></i></span>
+                            <span class="status-tag idea">Live</span>
+                        </div>
+                        <div class="project-content">
+                            <h4>[Project 1 Title]</h4>
+                            <p>[A short description of the core functionality.]</p>
+                            <div style="margin-bottom: 1rem;">
+                                <a href="[GITHUB]" class="icon-link"><i class="fab fa-github"></i></a>
+                                <a href="[LIVE]" class="icon-link"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="js">
+                        <div class="project-card-top">
+                            <span class="project-icon"><i class="fab fa-js"></i></span>
+                            <span class="status-tag idea">Live</span>
+                        </div>
+                        <div class="project-content">
+                            <h4>[Project 2 Title]</h4>
+                            <p>[A short description of the core functionality.]</p>
+                            <div style="margin-bottom: 1rem;">
+                                <a href="[GITHUB]" class="icon-link"><i class="fab fa-github"></i></a>
+                                <a href="[LIVE]" class="icon-link"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">API</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web">
+                        <div class="project-card-top">
+                            <span class="project-icon"><i class="fas fa-laptop-code"></i></span>
+                            <span class="status-tag idea">Live</span>
+                        </div>
+                        <div class="project-content">
+                            <h4>[Project 3 Title]</h4>
+                            <p>[A short description of the core functionality.]</p>
+                            <div style="margin-bottom: 1rem;">
+                                <a href="[GITHUB]" class="icon-link"><i class="fab fa-github"></i></a>
+                                <a href="[LIVE]" class="icon-link"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-tag">Responsive</span>
+                            <span class="project-tag">CSS</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="js web">
+                        <div class="project-card-top">
+                            <span class="project-icon"><i class="fas fa-chart-line"></i></span>
+                            <span class="status-tag planned">Working</span>
+                        </div>
+                        <div class="project-content">
+                            <h4>[Project 4 Title]</h4>
+                            <p>[A short description of the core functionality.]</p>
+                            <div style="margin-bottom: 1rem;">
+                                <a href="[GITHUB]" class="icon-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-tag">ES6</span>
+                            <span class="project-tag">HTML</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web">
+                        <div class="project-card-top">
+                            <span class="project-icon"><i class="fas fa-paint-brush"></i></span>
+                            <span class="status-tag planned">Working</span>
+                        </div>
+                        <div class="project-content">
+                            <h4>[Project 5 Title]</h4>
+                            <p>[A short description of the core functionality.]</p>
+                            <div style="margin-bottom: 1rem;">
+                                <a href="[GITHUB]" class="icon-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-tag">UI/UX</span>
+                            <span class="project-tag">Design</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="js">
+                        <div class="project-card-top">
+                            <span class="project-icon"><i class="fas fa-database"></i></span>
+                            <span class="status-tag planned">Working</span>
+                        </div>
+                        <div class="project-content">
+                            <h4>[Project 6 Title]</h4>
+                            <p>[A short description of the core functionality.]</p>
+                            <div style="margin-bottom: 1rem;">
+                                <a href="[GITHUB]" class="icon-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-tag">Back-end</span>
+                            <span class="project-tag">Node</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">Professional Experience</h2>
+                <div class="experience-timeline reveal">
+                    <!-- Timeline items map reference aesthetics but with standard logic -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"><i class="fas fa-briefcase"></i></div>
+                        <div class="timeline-card">
+                            <div class="timeline-head">
+                                <h3>[Your Exact Job Title]</h3>
+                                <span class="badge">[Jan 2023 - Present]</span>
+                            </div>
+                            <h4 class="edu-institution">[Company Name] | [Location]</h4>
+                            <p class="edu-desc">
+                                - Developed and maintained user interfaces for web applications.<br>
+                                - Streamlined deployment workflows saving considerable team time.<br>
+                                - Key achievement: Improved page performance scores by 30%.
+                            </p>
+                            <div class="project-tags">
+                                <span class="project-tag">JavaScript</span>
+                                <span class="project-tag">HTML/CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title reveal">Services Offered</h2>
+                <div class="exploring-grid reveal">
+                    <div class="explore-card">
+                        <i class="fas fa-laptop-code"></i>
+                        <span>Web Development</span>
+                    </div>
+                    <div class="explore-card">
+                        <i class="fas fa-paint-brush"></i>
+                        <span>UI/UX Design</span>
+                    </div>
+                    <div class="explore-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Responsive Websites</span>
+                    </div>
+                    <div class="explore-card">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Website Optimization</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education section">
+            <div class="container">
+                <h2 class="section-title reveal">Education & Certs</h2>
+                <!-- Academic -->
+                <div class="education-card reveal" style="margin-bottom: 2rem;">
+                    <div class="edu-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="edu-details" style="width: 100%;">
+                        <div class="edu-header">
+                            <h3>[Degree, e.g. B.Tech Computer Science]</h3>
+                            <span class="edu-date">[2018 – 2022]</span>
+                        </div>
+                        <h4 class="edu-institution">[University Name]</h4>
+                        <p class="edu-desc">Relevant Coursework: Web Technologies, Data Structures, Software
+                            Engineering.</p>
+                    </div>
+                </div>
+                <!-- Certificate -->
+                <div class="education-card reveal">
+                    <div class="edu-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="edu-details" style="width: 100%;">
+                        <div class="edu-header">
+                            <h3>[Certification Name]</h3>
+                            <span class="edu-date">[Year]</span>
+                        </div>
+                        <h4 class="edu-institution">[Issuer Organization Name]</h4>
+                        <p class="edu-desc">Completed advanced concepts aligning with modern digital engineering.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="section bg-light">
+            <div class="container text-center">
+                <h2 class="section-title reveal">Testimonials</h2>
+                <div class="testimonial-slider reveal" id="testimonial-slider"
+                    style="max-width: 800px; margin: 0 auto; position: relative;">
+
+                    <div class="project-card testimonial-slide active-slide" style="text-align: center;">
+                        <i class="fas fa-quote-left"
+                            style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                        <p class="edu-desc" style="font-style: italic; font-size: 1.1rem; margin-bottom: 1.5rem;">"An
+                            absolute joy to work with. Highly skilled, professional, and delivered exactly what we
+                            needed."</p>
+                        <h4>[Person Name]</h4>
+                        <span class="status-tag idea">[Position, Company]</span>
+                    </div>
+
+                    <div class="project-card testimonial-slide" style="text-align: center; display: none;">
+                        <i class="fas fa-quote-left"
+                            style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                        <p class="edu-desc" style="font-style: italic; font-size: 1.1rem; margin-bottom: 1.5rem;">
+                            "Exceptional attention to detail. Bridged the gap between logic and pixel-perfect design."
+                        </p>
+                        <h4>[Second Person]</h4>
+                        <span class="status-tag idea">[Manager, Startup]</span>
+                    </div>
+
+                    <div style="margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center;">
+                        <button class="btn btn-outline" id="test-prev"><i class="fas fa-arrow-left"></i></button>
+                        <button class="btn btn-outline" id="test-next"><i class="fas fa-arrow-right"></i></button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <h2 class="section-title reveal">Let's Build Something Together</h2>
+
+                <div class="contact-content reveal" style="margin-top: 3rem;">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:[EMAIL]">[EMAIL]@example.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <a href="tel:[PHONE]">[PHONE]</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <a href="[LINKEDIN URL]" target="_blank">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <form id="contact-form" class="contact-form" novalidate>
+                            <div class="form-notice"><i class="fas fa-info-circle"></i> Requires backend/email
+                                integration to function.</div>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Your Name">
+                                <span class="error-msg" style="display:none; color:red; font-size:0.85em;">Required
+                                    field</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required placeholder="Your Email">
+                                <span class="error-msg" style="display:none; color:red; font-size:0.85em;">Valid email
+                                    required</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required placeholder="Subject">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required
+                                    placeholder="Your Message"></textarea>
+                            </div>
+                            <button type="submit" id="submit-btn" class="btn btn-primary btn-block magnetic-btn">Send
+                                Message <i class="fas fa-paper-plane"></i></button>
+                            <div id="form-status" style="margin-top: 15px; font-weight: 500; display:none;"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand" style="margin-bottom: 2rem;">
+                <h3>[YOUR NAME]</h3>
+                <p>[YOUR PROFESSIONAL TITLE]</p>
+            </div>
+            <div class="footer-social" style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+                <a href="[GITHUB URL]" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="[LINKEDIN URL]" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:[EMAIL]" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom text-center" style="border-top: 1px solid var(--border-color); padding-top: 1rem;">
+            <p>&copy; <span id="current-year"></span> [YOUR NAME]. All Rights Reserved. Designed & Built with HTML, CSS
+                & Vanilla JS.</p>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to Top"><i class="fas fa-chevron-up"></i></button>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
