@@ -8,7 +8,7 @@ Design system: **"Ink & Ember"** — warm, editorial, precise. Built for a full 
 
 > **Divya Gavali**
 > Full Stack Developer, based in Pune
-> I build clean, fast web experiences — from React interfaces to Node/Express APIs backed by MongoDB. Currently sharpening my craft at NxtWave Institute of Advanced Technology.
+> I build clean, fast web experiences — from React interfaces to Node/Express APIs backend by MongoDB. Currently sharpening my craft at NxtWave Institute of Advanced Technology.
 
 **Alt shorter tagline (for nav/meta):**
 > Full Stack Developer crafting clean, functional web experiences.
@@ -138,7 +138,7 @@ Motion should feel **deliberate and smooth**, never bouncy or gimmicky. Target 3
 
 1. Hero (name, tagline, primary CTA: "View Work" / "Get in Touch")
 2. About Me
-3. Skills (grouped: Languages / Frontend / Backend / Tools)
+3. Skills (grouped: Languages / Frontend / Soft Skills / Tools)
 4. Projects (2–4 cards, asymmetric grid)
 5. Education
 6. Contact (email, GitHub, LinkedIn — styled as large clickable text links, not generic icon row)
@@ -159,7 +159,7 @@ These extend the original restraint list in Section 6 deliberately: the addition
 
 **v3 (2026 polish, per client request):** drifting copper/gold aurora blobs + a fading dot-grid in the hero; giant parallax watermark numbers (01–05) behind section headers; word-mask titles that settle from a soft blur; skill tags cascading in with a stagger; project titles that text-scramble on hover; project media that parallaxes against the cursor; scroll-spy nav highlighting; a back-to-top button with a circular progress ring; button shine sweeps; a hidden scrollbar (scrolling still works, desktop and mobile); and body-wide film grain. All effects remain `transform`/`opacity` only and fully disabled under `prefers-reduced-motion`.
 
-**v4 — "Developer Terminal" (chosen direction, per client request):** the hero centerpiece becomes a CSS-built terminal window that types its output on load — `$ whoami → Divya Gavali — Full Stack Developer`, `$ stack --list → react · node · express · mongodb · python · c++`, `$ status → open to full-stack internships`. The terminal stays a fixed dark panel in both themes (like a code block) so it always reads. The profile portrait moves into the About section; Skills opens with a `~/skills $ npm list --depth=0` probe line; the footer closes with `$ exit`. Typing is skipped entirely under `prefers-reduced-motion` (full text shows instantly) and when JS fails (static HTML fallback).
+**v4 — "Developer Terminal" (chosen direction, per client request):** the hero centerpiece becomes a CSS-built terminal window that types its output on load — `$ whoami → Divya Gavali — Full Stack Developer`, `$ stack --list → react · node · express · mongodb · python · c++`, `$ status → open to frontend developer internships`. The terminal stays a fixed dark panel in both themes (like a code block) so it always reads. The profile portrait moves into the About section; Skills opens with a `~/skills $ npm list --depth=0` probe line; the footer closes with `$ exit`. Typing is skipped entirely under `prefers-reduced-motion` (full text shows instantly) and when JS fails (static HTML fallback).
 
 ---
 

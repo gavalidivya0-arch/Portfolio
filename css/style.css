@@ -134,11 +134,6 @@ button {
     margin-bottom: clamp(2.5rem, 6vw, 4rem);
 }
 
-.section-num {
-    font-size: 0.9rem;
-    color: var(--accent);
-}
-
 .section-title {
     font-family: var(--font-display);
     font-weight: 500;
@@ -1331,26 +1326,6 @@ body::after {
     mask-image: radial-gradient(ellipse at 72% 26%, black 0%, transparent 62%);
 }
 
-/* Giant watermark section numbers */
-.section-head {
-    position: relative;
-}
-
-.section-watermark {
-    position: absolute;
-    top: -2rem;
-    right: 0;
-    font-family: var(--font-display);
-    font-style: italic;
-    font-size: clamp(5rem, 12vw, 9rem);
-    line-height: 1;
-    color: var(--fg);
-    opacity: 0.04;
-    pointer-events: none;
-    user-select: none;
-    will-change: transform;
-}
-
 /* Word-mask blur settle */
 .split-title .wi {
     filter: blur(8px);
@@ -1676,10 +1651,6 @@ html::-webkit-scrollbar {
 }
 
 @media screen and (max-width: 700px) {
-    .section-watermark {
-        display: none;
-    }
-
     .aurora-blob {
         filter: blur(60px);
     }
