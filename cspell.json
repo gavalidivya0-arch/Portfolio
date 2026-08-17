@@ -1,0 +1,30 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "Divya",
+    "Gavali",
+    "divya",
+    "gavali",
+    "gavalidivya",
+    "gavalidivya0",
+    "divyagavali",
+    "divya-gavali",
+    "Fraunces",
+    "Saraswati",
+    "Vidyalaya",
+    "NxtWave",
+    "Nxtwave",
+    "JetBrains",
+    "FormSubmit",
+    "formsubmit",
+    "MongoDB",
+    "Pune",
+    "Thane"
+  ],
+  "ignorePaths": [
+    "assets/**",
+    "node_modules/**",
+    "package-lock.json"
+  ]
+}

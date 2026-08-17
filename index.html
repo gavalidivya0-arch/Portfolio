@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[YOUR NAME] | [YOUR PROFESSIONAL TITLE]</title>
-    <meta name="description" content="[YOUR BIO OR SHORT DESCRIPTION FOR SEO]">
+    <title>Divya Gavali — Full Stack Developer</title>
+    <meta name="description"
+        content="Full Stack Developer crafting clean, functional web experiences — React on the frontend, Node/Express + MongoDB on the backend. Based in Pune.">
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Fraunces (display) · Inter (body) · JetBrains Mono (meta/tags) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet">
-
-    <!-- FontAwesome Icons (Requested by Reference) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -22,545 +21,463 @@
 
 <body>
 
-    <!-- Custom Cursor -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
+    <!-- Scroll progress bar -->
+    <div class="scroll-progress" aria-hidden="true"></div>
 
-    <!-- Scroll Progress -->
-    <div class="scroll-progress"></div>
+    <!-- ============================================================
+         Navigation — transparent → blurred on scroll
+         ============================================================ -->
+    <header class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo">Divya Gavali</a>
 
-    <!-- Navigation -->
-    <header class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="#home" class="logo">[YOUR NAME]</a>
-
-            <div class="menu-icon" id="menu-icon">
-                <i class="fas fa-bars"></i>
-            </div>
-
-            <nav class="nav-links" id="nav-links">
-                <a href="#home" class="nav-link active">Home</a>
+            <nav class="nav-links" id="nav-links" aria-label="Primary">
                 <a href="#about" class="nav-link">About</a>
                 <a href="#skills" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#work" class="nav-link">Work</a>
                 <a href="#education" class="nav-link">Education</a>
                 <a href="#contact" class="nav-link">Contact</a>
 
-                <!-- Theme Toggle Native to our constraints -->
-                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
-                    <i class="fas fa-moon"></i>
+                <a href="#contact" class="btn btn-primary nav-cta">Let's Talk</a>
+
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle color theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4.5" />
+                        <path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8" />
+                    </svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true">
+                        <path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11Z" />
+                    </svg>
                 </button>
             </nav>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero section">
-            <div class="container hero-container">
-                <div class="hero-content reveal">
-                    <p class="greeting">Hi, I'm</p>
-                    <h1 class="name">
-                        <span class="typewriter">[YOUR NAME]</span>
-                    </h1>
-                    <h2 class="role">[YOUR PROFESSIONAL TITLE]</h2>
-                    <p class="intro">
-                        [YOUR BIO - e.g., I create meaningful digital experiences through technology, creativity, and
-                        problem-solving, specializing in modern interactive architectures.]
-                    </p>
-                    <div class="cta-group">
-                        <a href="#projects" class="btn btn-primary magnetic-btn">View My Work</a>
-                        <a href="#contact" class="btn btn-outline magnetic-btn">Contact Me</a>
-                    </div>
-                    <div class="social-links">
-                        <a href="[GITHUB URL]" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="[LINKEDIN URL]" target="_blank" aria-label="LinkedIn"><i
-                                class="fab fa-linkedin"></i></a>
-                        <a href="[TWITTER URL]" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="assets/resume/[YOUR_RESUME].pdf" target="_blank" aria-label="Resume"
-                            title="Download Resume"><i class="fas fa-file-download"></i></a>
-                    </div>
-                </div>
-                <div class="hero-image reveal delay-1">
-                    <div class="image-placeholder profile-placeholder">
-                        <i class="fas fa-user-circle"></i>
-                        <span>Profile<br>Image</span>
-                    </div>
-                </div>
+        <!-- ============================================================
+             Hero
+             ============================================================ -->
+        <section id="home" class="hero">
+            <div class="grain" aria-hidden="true"></div>
+            <div class="dots" aria-hidden="true"></div>
+            <div class="aurora" aria-hidden="true">
+                <span class="aurora-blob aurora-blob-1"></span>
+                <span class="aurora-blob aurora-blob-2"></span>
+                <span class="aurora-blob aurora-blob-3"></span>
             </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="about section bg-light">
+            <div class="hero-spot" aria-hidden="true"></div>
             <div class="container">
-                <h2 class="section-title reveal">About Me</h2>
-                <div class="about-content reveal">
-                    <div class="about-text">
-                        <p>I am a passionate technology enthusiast based in [LOCATION], focusing on software
-                            engineering, performance optimization, and premium user experiences.</p>
-                        <p>Currently, I am heavily focused on continuously developing my technical and problem-solving
-                            skills to prepare for professional opportunities and build real-world applications that make
-                            a difference.</p>
-
-                        <div class="about-stats mt-3">
-                            <div class="stat-item">
-                                <h4 class="counter" data-target="3">0</h4>
-                                <p>Years Exp</p>
-                            </div>
-                            <div class="stat-item">
-                                <h4 class="counter" data-target="15">0</h4>
-                                <p>Projects</p>
-                            </div>
-                            <div class="stat-item">
-                                <h4 class="counter" data-target="20">0</h4>
-                                <p>Tools</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-highlights">
-                        <div class="highlight-item">
-                            <i class="fas fa-bullseye highlight-icon"></i>
-                            <div>
-                                <h3>Personal Mission</h3>
-                                <p>Leveraging tech to solve real-world problems.</p>
-                            </div>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-laptop-code highlight-icon"></i>
-                            <div>
-                                <h3>Roles</h3>
-                                <p>Software Engineer</p>
-                                <p class="text-sm">Full-Stack & UX Design</p>
-                            </div>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-map-marker-alt highlight-icon"></i>
-                            <div>
-                                <h3>Location</h3>
-                                <p>[CITY, COUNTRY]</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="skills section">
-            <div class="container">
-                <h2 class="section-title reveal">Technical Skills</h2>
-                <div class="skills-grid reveal">
-
-                    <div class="skill-category">
-                        <h3><i class="fas fa-code"></i> Frontend & UI</h3>
-                        <div class="skill-tags">
-                            <span class="tag"><i class="fab fa-html5"></i> HTML5</span>
-                            <span class="tag"><i class="fab fa-css3-alt"></i> CSS3</span>
-                            <span class="tag"><i class="fab fa-js"></i> JavaScript</span>
-                            <span class="tag"><i class="fas fa-mobile-alt"></i> Responsive</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3><i class="fas fa-laptop-code"></i> Programming</h3>
-                        <div class="skill-tags">
-                            <span class="tag"><i class="fab fa-python"></i> Python</span>
-                            <span class="tag"><i class="fab fa-java"></i> Java</span>
-                            <span class="tag"><i class="fas fa-c"></i> C++</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3><i class="fas fa-tools"></i> Tools</h3>
-                        <div class="skill-tags">
-                            <span class="tag"><i class="fab fa-git-alt"></i> Git</span>
-                            <span class="tag"><i class="fab fa-github"></i> GitHub</span>
-                            <span class="tag"><i class="fas fa-file-code"></i> VS Code</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3><i class="fas fa-lightbulb"></i> Other Skills</h3>
-                        <div class="skill-tags">
-                            <span class="tag"><i class="fas fa-paint-brush"></i> UI/UX Design</span>
-                            <span class="tag"><i class="fas fa-users"></i> Teamwork</span>
-                            <span class="tag"><i class="fas fa-puzzle-piece"></i> Problem Solving</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section (Including Featured Project Layout constraint) -->
-        <section id="projects" class="projects section bg-light">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-eyebrow">Portfolio Works</span>
-                    <h2 class="section-title reveal">Projects</h2>
-                </div>
-
-                <!-- Featured Project mapped to main-project-card reference -->
-                <div class="main-project-card reveal">
-                    <div class="main-project-icon" aria-hidden="true">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3>Featured Case Study: [PROJECT NAME]</h3>
-                    <p>[Detailed Project Description. Example: Developed a comprehensive enterprise dashboard solving X
-                        by doing Y.]</p>
-
-                    <div class="project-tags mt-3">
-                        <span class="project-tag">Problem Solving</span>
-                        <span class="project-tag">API Integration</span>
-                        <span class="project-tag">Optimization Result: 50%</span>
-                    </div>
-
-                    <div class="cta-group" style="justify-content: center; margin-top: 2rem;">
-                        <a href="[GITHUB LINK]" class="btn btn-primary"><i class="fab fa-github"></i> Source</a>
-                        <a href="[LIVE LINK]" class="btn btn-outline"><i class="fas fa-external-link-alt"></i> Live
-                            Demo</a>
-                    </div>
-                </div>
-
-                <h3 class="subsection-title reveal" style="text-align: center;">Selected Works</h3>
-
-                <div class="project-filters reveal" style="text-align: center; margin-bottom: 2rem;">
-                    <button class="btn btn-outline filter-btn active" data-filter="all">All</button>
-                    <button class="btn btn-outline filter-btn" data-filter="web">Web Dev</button>
-                    <button class="btn btn-outline filter-btn" data-filter="js">JavaScript</button>
-                </div>
-
-                <div class="projects-grid reveal">
-
-                    <div class="project-card" data-category="web">
-                        <div class="project-card-top">
-                            <span class="project-icon"><i class="fas fa-globe"></i></span>
-                            <span class="status-tag idea">Live</span>
-                        </div>
-                        <div class="project-content">
-                            <h4>[Project 1 Title]</h4>
-                            <p>[A short description of the core functionality.]</p>
-                            <div style="margin-bottom: 1rem;">
-                                <a href="[GITHUB]" class="icon-link"><i class="fab fa-github"></i></a>
-                                <a href="[LIVE]" class="icon-link"><i class="fas fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="project-footer">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="js">
-                        <div class="project-card-top">
-                            <span class="project-icon"><i class="fab fa-js"></i></span>
-                            <span class="status-tag idea">Live</span>
-                        </div>
-                        <div class="project-content">
-                            <h4>[Project 2 Title]</h4>
-                            <p>[A short description of the core functionality.]</p>
-                            <div style="margin-bottom: 1rem;">
-                                <a href="[GITHUB]" class="icon-link"><i class="fab fa-github"></i></a>
-                                <a href="[LIVE]" class="icon-link"><i class="fas fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="project-footer">
-                            <span class="project-tag">JavaScript</span>
-                            <span class="project-tag">API</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="web">
-                        <div class="project-card-top">
-                            <span class="project-icon"><i class="fas fa-laptop-code"></i></span>
-                            <span class="status-tag idea">Live</span>
-                        </div>
-                        <div class="project-content">
-                            <h4>[Project 3 Title]</h4>
-                            <p>[A short description of the core functionality.]</p>
-                            <div style="margin-bottom: 1rem;">
-                                <a href="[GITHUB]" class="icon-link"><i class="fab fa-github"></i></a>
-                                <a href="[LIVE]" class="icon-link"><i class="fas fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="project-footer">
-                            <span class="project-tag">Responsive</span>
-                            <span class="project-tag">CSS</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="js web">
-                        <div class="project-card-top">
-                            <span class="project-icon"><i class="fas fa-chart-line"></i></span>
-                            <span class="status-tag planned">Working</span>
-                        </div>
-                        <div class="project-content">
-                            <h4>[Project 4 Title]</h4>
-                            <p>[A short description of the core functionality.]</p>
-                            <div style="margin-bottom: 1rem;">
-                                <a href="[GITHUB]" class="icon-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                        <div class="project-footer">
-                            <span class="project-tag">ES6</span>
-                            <span class="project-tag">HTML</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="web">
-                        <div class="project-card-top">
-                            <span class="project-icon"><i class="fas fa-paint-brush"></i></span>
-                            <span class="status-tag planned">Working</span>
-                        </div>
-                        <div class="project-content">
-                            <h4>[Project 5 Title]</h4>
-                            <p>[A short description of the core functionality.]</p>
-                            <div style="margin-bottom: 1rem;">
-                                <a href="[GITHUB]" class="icon-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                        <div class="project-footer">
-                            <span class="project-tag">UI/UX</span>
-                            <span class="project-tag">Design</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="js">
-                        <div class="project-card-top">
-                            <span class="project-icon"><i class="fas fa-database"></i></span>
-                            <span class="status-tag planned">Working</span>
-                        </div>
-                        <div class="project-content">
-                            <h4>[Project 6 Title]</h4>
-                            <p>[A short description of the core functionality.]</p>
-                            <div style="margin-bottom: 1rem;">
-                                <a href="[GITHUB]" class="icon-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                        <div class="project-footer">
-                            <span class="project-tag">Back-end</span>
-                            <span class="project-tag">Node</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="section">
-            <div class="container">
-                <h2 class="section-title reveal">Professional Experience</h2>
-                <div class="experience-timeline reveal">
-                    <!-- Timeline items map reference aesthetics but with standard logic -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"><i class="fas fa-briefcase"></i></div>
-                        <div class="timeline-card">
-                            <div class="timeline-head">
-                                <h3>[Your Exact Job Title]</h3>
-                                <span class="badge">[Jan 2023 - Present]</span>
-                            </div>
-                            <h4 class="edu-institution">[Company Name] | [Location]</h4>
-                            <p class="edu-desc">
-                                - Developed and maintained user interfaces for web applications.<br>
-                                - Streamlined deployment workflows saving considerable team time.<br>
-                                - Key achievement: Improved page performance scores by 30%.
-                            </p>
-                            <div class="project-tags">
-                                <span class="project-tag">JavaScript</span>
-                                <span class="project-tag">HTML/CSS</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section id="services" class="section bg-light">
-            <div class="container">
-                <h2 class="section-title reveal">Services Offered</h2>
-                <div class="exploring-grid reveal">
-                    <div class="explore-card">
-                        <i class="fas fa-laptop-code"></i>
-                        <span>Web Development</span>
-                    </div>
-                    <div class="explore-card">
-                        <i class="fas fa-paint-brush"></i>
-                        <span>UI/UX Design</span>
-                    </div>
-                    <div class="explore-card">
-                        <i class="fas fa-mobile-alt"></i>
-                        <span>Responsive Websites</span>
-                    </div>
-                    <div class="explore-card">
-                        <i class="fas fa-tachometer-alt"></i>
-                        <span>Website Optimization</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education" class="education section">
-            <div class="container">
-                <h2 class="section-title reveal">Education & Certs</h2>
-                <!-- Academic -->
-                <div class="education-card reveal" style="margin-bottom: 2rem;">
-                    <div class="edu-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <div class="edu-details" style="width: 100%;">
-                        <div class="edu-header">
-                            <h3>[Degree, e.g. B.Tech Computer Science]</h3>
-                            <span class="edu-date">[2018 – 2022]</span>
-                        </div>
-                        <h4 class="edu-institution">[University Name]</h4>
-                        <p class="edu-desc">Relevant Coursework: Web Technologies, Data Structures, Software
-                            Engineering.</p>
-                    </div>
-                </div>
-                <!-- Certificate -->
-                <div class="education-card reveal">
-                    <div class="edu-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <div class="edu-details" style="width: 100%;">
-                        <div class="edu-header">
-                            <h3>[Certification Name]</h3>
-                            <span class="edu-date">[Year]</span>
-                        </div>
-                        <h4 class="edu-institution">[Issuer Organization Name]</h4>
-                        <p class="edu-desc">Completed advanced concepts aligning with modern digital engineering.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials -->
-        <section id="testimonials" class="section bg-light">
-            <div class="container text-center">
-                <h2 class="section-title reveal">Testimonials</h2>
-                <div class="testimonial-slider reveal" id="testimonial-slider"
-                    style="max-width: 800px; margin: 0 auto; position: relative;">
-
-                    <div class="project-card testimonial-slide active-slide" style="text-align: center;">
-                        <i class="fas fa-quote-left"
-                            style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
-                        <p class="edu-desc" style="font-style: italic; font-size: 1.1rem; margin-bottom: 1.5rem;">"An
-                            absolute joy to work with. Highly skilled, professional, and delivered exactly what we
-                            needed."</p>
-                        <h4>[Person Name]</h4>
-                        <span class="status-tag idea">[Position, Company]</span>
-                    </div>
-
-                    <div class="project-card testimonial-slide" style="text-align: center; display: none;">
-                        <i class="fas fa-quote-left"
-                            style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
-                        <p class="edu-desc" style="font-style: italic; font-size: 1.1rem; margin-bottom: 1.5rem;">
-                            "Exceptional attention to detail. Bridged the gap between logic and pixel-perfect design."
+                <div class="hero-inner">
+                    <div class="hero-content">
+                        <p class="hero-meta mono reveal">Full Stack Developer — Pune, India</p>
+                        <h1 class="hero-name">Divya <em>Gavali</em></h1>
+                        <p class="hero-tagline reveal">
+                            I build clean, fast web experiences — from React interfaces to Node/Express APIs
+                            backed by MongoDB.
                         </p>
-                        <h4>[Second Person]</h4>
-                        <span class="status-tag idea">[Manager, Startup]</span>
+
+                        <div class="hero-cta reveal">
+                            <a href="#work" class="btn btn-primary magnetic">View Work</a>
+                            <a href="#contact" class="btn btn-outline magnetic">Get in Touch</a>
+                        </div>
+
+                        <div class="hero-links mono reveal">
+                            <a href="https://github.com/gavalidivya0-arch" target="_blank" rel="noopener">GitHub ↗</a>
+                            <a href="https://www.linkedin.com/in/divya-gavali-b30106341/" target="_blank" rel="noopener">LinkedIn ↗</a>
+                            <a href="mailto:gavalidivya0@gmail.com">Email</a>
+                        </div>
                     </div>
 
-                    <div style="margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center;">
-                        <button class="btn btn-outline" id="test-prev"><i class="fas fa-arrow-left"></i></button>
-                        <button class="btn btn-outline" id="test-next"><i class="fas fa-arrow-right"></i></button>
+                    <!-- Terminal hero — the stack speaks for itself -->
+                    <div class="hero-terminal-wrap reveal" role="img"
+                        aria-label="Terminal output: whoami — Divya Gavali, Full Stack Developer; stack — React, Node, Express, MongoDB, Python, C++; status — open to full-stack internships, based in Pune">
+                        <div class="terminal">
+                            <div class="terminal-bar">
+                                <span class="terminal-dot terminal-dot-1" aria-hidden="true"></span>
+                                <span class="terminal-dot terminal-dot-2" aria-hidden="true"></span>
+                                <span class="terminal-dot terminal-dot-3" aria-hidden="true"></span>
+                                <span class="terminal-title mono">divya@portfolio: ~</span>
+                            </div>
+                            <div class="terminal-body mono" id="terminal-body">
+                                <div class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">whoami</span></div>
+                                <div class="term-line term-out">Divya Gavali — Full Stack Developer</div>
+                                <div class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">stack --list</span></div>
+                                <div class="term-line term-out term-out-sage">react · node · express · mongodb · python · c++</div>
+                                <div class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">status</span></div>
+                                <div class="term-line term-out term-out-gold">open to full-stack internships · based in Pune</div>
+                                <div class="term-line term-cursor-line" aria-hidden="true">
+                                    <span class="term-prompt">$</span><span class="term-cursor">▊</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
+            </div>
+
+            <span class="hero-corner hero-corner-left mono" aria-hidden="true">Pune, IN — 18.52°N · 73.86°E</span>
+            <span class="hero-corner hero-corner-right mono" aria-hidden="true">Open to internships</span>
+            <div class="scroll-hint" aria-hidden="true">
+                <span>Scroll</span>
+                <span class="line"></span>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact section">
+        <!-- ============================================================
+             About — 01
+             ============================================================ -->
+        <section id="about" class="section alt">
             <div class="container">
-                <h2 class="section-title reveal">Let's Build Something Together</h2>
+                <header class="section-head reveal">
+                    <span class="section-watermark mono" aria-hidden="true">01</span>
+                    <span class="section-num mono">01</span>
+                    <h2 class="section-title">About Me</h2>
+                </header>
 
-                <div class="contact-content reveal" style="margin-top: 3rem;">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email</h4>
-                                <a href="mailto:[EMAIL]">[EMAIL]@example.com</a>
+                <div class="about-grid">
+                    <div class="about-story reveal">
+                        <p>
+                            I'm Divya, a full stack developer who enjoys turning ideas into working products — end to
+                            end. My comfort zone spans the whole stack: React and JavaScript on the frontend, Express
+                            and Node on the backend, MongoDB for data, and C++ for the problem-solving fundamentals
+                            that keep my logic sharp.
+                        </p>
+                        <p>
+                            I'm currently a student at NxtWave Institute of Advanced Technology, where I've been
+                            building real projects instead of just theory — which is exactly the kind of hands-on
+                            developer I want to be. I care about writing code that's readable, interfaces that feel
+                            intentional, and products that actually solve something.
+                        </p>
+                        <p>
+                            Right now, I'm looking for an internship where I can contribute to real-world systems,
+                            learn from experienced engineers, and keep growing as a full stack developer.
+                        </p>
+                    </div>
+
+                    <aside class="about-side">
+                        <!-- Profile portrait — drop your photo at assets/profile/divya.jpg (4:5, ~800×1000px).
+                             Until then the DG monogram shows automatically. -->
+                        <figure class="about-figure reveal" aria-label="Portrait of Divya Gavali">
+                            <div class="portrait">
+                                <img src="assets/profile/divya.jpg" alt="Portrait of Divya Gavali" width="800" height="1000"
+                                    onerror="this.classList.add('img-missing'); this.removeAttribute('onerror');">
+                                <span class="portrait-fallback" aria-hidden="true">DG</span>
+                                <span class="portrait-badge mono">Open to work</span>
                             </div>
+                        </figure>
+
+                        <!-- TODO: keep stats honest — update when real numbers exist -->
+                        <div class="stat reveal">
+                            <span class="stat-value mono"><span class="counter" data-target="3">0</span>+</span>
+                            <span class="stat-label mono">Projects built</span>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h4>Phone</h4>
-                                <a href="tel:[PHONE]">[PHONE]</a>
-                            </div>
+                        <div class="stat reveal">
+                            <span class="stat-value mono"><span class="counter" data-target="1">0</span>+</span>
+                            <span class="stat-label mono">Years of hands-on coding</span>
                         </div>
-                        <div class="contact-item">
-                            <i class="fab fa-linkedin"></i>
-                            <div>
-                                <h4>LinkedIn</h4>
-                                <a href="[LINKEDIN URL]" target="_blank">View Profile</a>
-                            </div>
+                        <div class="stat reveal">
+                            <span class="stat-value mono"><span class="counter" data-target="5">0</span>+</span>
+                            <span class="stat-label mono">Technologies in daily use</span>
+                        </div>
+                        <div class="availability reveal">
+                            <span class="dot" aria-hidden="true"></span>
+                            <span class="mono">Open to full-stack internships</span>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             Skills — 02
+             ============================================================ -->
+        <section id="skills" class="section">
+            <div class="container">
+                <header class="section-head reveal">
+                    <span class="section-watermark mono" aria-hidden="true">02</span>
+                    <span class="section-num mono">02</span>
+                    <h2 class="section-title">Skills</h2>
+                </header>
+
+                <p class="term-probe mono reveal">~/skills $ npm list --depth=0</p>
+
+                <div class="skills-grid">
+                    <div class="skill-group card reveal">
+                        <h3 class="skill-label mono gold">Languages</h3>
+                        <div class="tags">
+                            <span class="tag">JavaScript (ES6+)</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
                         </div>
                     </div>
 
-                    <div class="contact-form-container">
-                        <form id="contact-form" class="contact-form" novalidate>
-                            <div class="form-notice"><i class="fas fa-info-circle"></i> Requires backend/email
-                                integration to function.</div>
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" required placeholder="Your Name">
-                                <span class="error-msg" style="display:none; color:red; font-size:0.85em;">Required
-                                    field</span>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required placeholder="Your Email">
-                                <span class="error-msg" style="display:none; color:red; font-size:0.85em;">Valid email
-                                    required</span>
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <input type="text" id="subject" name="subject" required placeholder="Subject">
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="5" required
-                                    placeholder="Your Message"></textarea>
-                            </div>
-                            <button type="submit" id="submit-btn" class="btn btn-primary btn-block magnetic-btn">Send
-                                Message <i class="fas fa-paper-plane"></i></button>
-                            <div id="form-status" style="margin-top: 15px; font-weight: 500; display:none;"></div>
-                        </form>
+                    <div class="skill-group card reveal">
+                        <h3 class="skill-label mono sage">Frontend</h3>
+                        <div class="tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Responsive Design</span>
+                            <span class="tag">State Management</span>
+                            <span class="tag">RESTful Consumption</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group card reveal">
+                        <h3 class="skill-label mono gold">Backend</h3>
+                        <div class="tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Express</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">REST APIs</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group card reveal">
+                        <h3 class="skill-label mono sage">Tools</h3>
+                        <div class="tags">
+                            <span class="tag">Git</span>
+                            <span class="tag">GitHub</span>
+                            <span class="tag">VS Code</span>
+                            <span class="tag">npm</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ============================================================
+             Work — 03
+             ============================================================ -->
+        <section id="work" class="section alt">
+            <div class="container">
+                <header class="section-head reveal">
+                    <span class="section-watermark mono" aria-hidden="true">03</span>
+                    <span class="section-num mono">03</span>
+                    <h2 class="section-title">Selected Work</h2>
+                </header>
+
+                <!-- TODO: replace sample projects with real ones; drop a real 16:9 screenshot
+                     inside .project-media as <img src="assets/projects/xxx.png" alt="..."> -->
+                <div class="work-grid">
+
+                    <article class="project-card featured reveal">
+                        <a class="project-media" href="#" aria-label="TaskFlow — view project">
+                            <span class="project-num mono">01 / 03</span>
+                            <span class="project-stack mono">React · Node · MongoDB</span>
+                        </a>
+                        <div class="project-body">
+                            <h3 class="project-title">TaskFlow — Full-Stack Task Manager</h3>
+                            <p class="project-desc">
+                                A kanban-style task manager with drag-and-drop boards, JWT authentication, and
+                                real-time updates. Built end to end — UI, API, and data layer.
+                            </p>
+                            <div class="tags mono">
+                                <span class="tag sage">React</span>
+                                <span class="tag sage">Node.js</span>
+                                <span class="tag sage">Express</span>
+                                <span class="tag sage">MongoDB</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="text-link">View Live ↗</a>
+                                <a href="#" class="text-link">Source ↗</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <a class="project-media" href="#" aria-label="Campus Connect API — view project">
+                            <span class="project-num mono">02 / 03</span>
+                            <span class="project-stack mono">Node · Express · MongoDB</span>
+                        </a>
+                        <div class="project-body">
+                            <h3 class="project-title">Campus Connect API</h3>
+                            <p class="project-desc">
+                                A REST API powering a college community platform — user auth, posts, comments, and
+                                likes, with rate limiting and input validation.
+                            </p>
+                            <div class="tags mono">
+                                <span class="tag gold">Node.js</span>
+                                <span class="tag gold">Express</span>
+                                <span class="tag gold">MongoDB</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="text-link">View Live ↗</a>
+                                <a href="#" class="text-link">Source ↗</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <a class="project-media" href="#" aria-label="UI component library — view project">
+                            <span class="project-num mono">03 / 03</span>
+                            <span class="project-stack mono">React · JavaScript · CSS</span>
+                        </a>
+                        <div class="project-body">
+                            <h3 class="project-title">UI Component Library</h3>
+                            <p class="project-desc">
+                                A small, reusable React component library with theme support, dark mode, and
+                                accessibility-first primitives.
+                            </p>
+                            <div class="tags mono">
+                                <span class="tag sage">React</span>
+                                <span class="tag sage">JavaScript</span>
+                                <span class="tag sage">CSS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="text-link">View Live ↗</a>
+                                <a href="#" class="text-link">Source ↗</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             Education — 04
+             ============================================================ -->
+        <section id="education" class="section">
+            <div class="container">
+                <header class="section-head reveal">
+                    <span class="section-watermark mono" aria-hidden="true">04</span>
+                    <span class="section-num mono">04</span>
+                    <h2 class="section-title">Education</h2>
+                </header>
+
+                <div class="edu-card card reveal">
+                    <div class="edu-head">
+                        <h3 class="edu-title">Full Stack Development Program</h3>
+                        <span class="edu-date mono">2024 — Present</span>
+                    </div>
+                    <p class="edu-school mono sage">NxtWave Institute of Advanced Technology</p>
+                    <p class="edu-desc">
+                        Hands-on program covering the modern full stack — React, Node.js, Express, and MongoDB —
+                        with real projects built alongside the coursework rather than theory alone.
+                    </p>
+                </div>
+
+                <div class="edu-card card reveal">
+                    <div class="edu-head">
+                        <h3 class="edu-title">Higher Secondary Education (11th &amp; 12th)</h3>
+                        <span class="edu-date mono">2023 — 2025</span>
+                    </div>
+                    <p class="edu-school mono sage">Saraswati Vidyalaya — Thane, Maharashtra</p>
+                    <p class="edu-desc">
+                        Completed Higher Secondary Education with Computer Science as a core subject, building strong
+                        foundations in programming fundamentals, web technologies, and logical problem-solving through
+                        coursework and hands-on projects.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Physics</span>
+                        <span class="tag">Chemistry</span>
+                        <span class="tag">Mathematics</span>
+                        <span class="tag sage">Computer Science</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             Contact — 05
+             ============================================================ -->
+        <section id="contact" class="section alt">
+            <div class="container">
+                <header class="section-head reveal">
+                    <span class="section-watermark mono" aria-hidden="true">05</span>
+                    <span class="section-num mono">05</span>
+                    <h2 class="section-title">Contact</h2>
+                </header>
+
+                <p class="contact-intro reveal">
+                    Looking for a full stack developer for your team or an internship opportunity? Let's talk.
+                </p>
+
+                <div class="contact-grid reveal">
+                    <div class="contact-form-wrap card">
+                    <!-- FormSubmit: free, no account. First submission triggers a one-time
+                         activation email to the address in the endpoint below. -->
+                    <form id="contact-form" class="contact-form" novalidate>
+                        <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="New message from portfolio">
+
+                        <div class="form-group">
+                            <label class="mono" for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
+                            <span class="error-msg">Please enter your name.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="mono" for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="you@example.com">
+                            <span class="error-msg">Please enter a valid email.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="mono" for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                placeholder="Tell me about your project or opportunity"></textarea>
+                            <span class="error-msg">Please write a short message.</span>
+                        </div>
+
+                        <button type="submit" id="submit-btn" class="btn btn-primary magnetic">Send Message</button>
+                        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+                    </form>
+                    </div>
+
+                    <aside class="contact-aside">
+                        <h3 class="contact-aside-title mono">Direct links</h3>
+                        <div class="contact-rows">
+                            <div class="contact-row">
+                                <span class="contact-row-label mono">Email</span>
+                                <a href="mailto:gavalidivya0@gmail.com" class="contact-row-link">gavalidivya0@gmail.com</a>
+                            </div>
+                            <div class="contact-row">
+                                <span class="contact-row-label mono">GitHub</span>
+                                <a href="https://github.com/gavalidivya0-arch" target="_blank" rel="noopener" class="contact-row-link">gavalidivya0-arch ↗</a>
+                            </div>
+                            <div class="contact-row">
+                                <span class="contact-row-label mono">LinkedIn</span>
+                                <a href="https://www.linkedin.com/in/divya-gavali-b30106341/" target="_blank" rel="noopener" class="contact-row-link">divya-gavali-b30106341 ↗</a>
+                            </div>
+                        </div>
+                        <p class="contact-aside-note muted">Prefer email? I usually reply within a day.</p>
+                    </aside>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer -->
+    <!-- ============================================================
+         Footer
+         ============================================================ -->
     <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-brand" style="margin-bottom: 2rem;">
-                <h3>[YOUR NAME]</h3>
-                <p>[YOUR PROFESSIONAL TITLE]</p>
-            </div>
-            <div class="footer-social" style="display: flex; gap: 1rem; margin-bottom: 2rem;">
-                <a href="[GITHUB URL]" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="[LINKEDIN URL]" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:[EMAIL]" aria-label="Email"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-        <div class="footer-bottom text-center" style="border-top: 1px solid var(--border-color); padding-top: 1rem;">
-            <p>&copy; <span id="current-year"></span> [YOUR NAME]. All Rights Reserved. Designed & Built with HTML, CSS
-                & Vanilla JS.</p>
+        <div class="container footer-inner">
+            <p class="mono">© <span id="current-year"></span> Divya Gavali — Full Stack Developer</p>
+            <p class="mono"><a href="mailto:gavalidivya0@gmail.com" class="footer-email">gavalidivya0@gmail.com</a></p>
+            <p class="mono muted">$ exit — thanks for reading ✦ Designed &amp; built with Fraunces, Inter &amp; JetBrains Mono</p>
         </div>
     </footer>
 
-    <!-- Back to top button -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to Top"><i class="fas fa-chevron-up"></i></button>
+    <!-- Back to top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg class="btt-ring" viewBox="0 0 44 44" aria-hidden="true">
+            <circle class="btt-ring-track" cx="22" cy="22" r="19"></circle>
+            <circle class="btt-ring-progress" cx="22" cy="22" r="19"></circle>
+        </svg>
+        <svg class="btt-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg>
+    </button>
 
     <script src="js/script.js"></script>
 </body>
