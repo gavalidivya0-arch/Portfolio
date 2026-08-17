@@ -58,29 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (section) spyObserver.observe(section);
     });
 
-    /* --- 2c. Watermark parallax --- */
-    const watermarks = document.querySelectorAll('.section-watermark');
-    if (!prefersReducedMotion && watermarks.length) {
-        let watermarkTicking = false;
-        const applyWatermarks = () => {
-            watermarks.forEach(wm => {
-                const section = wm.closest('section');
-                if (!section) return;
-                const rect = section.getBoundingClientRect();
-                const offset = (rect.top + rect.height / 2 - window.innerHeight / 2) * -0.06;
-                wm.style.transform = `translateY(${offset.toFixed(1)}px)`;
-            });
-            watermarkTicking = false;
-        };
-        window.addEventListener('scroll', () => {
-            if (!watermarkTicking) {
-                watermarkTicking = true;
-                requestAnimationFrame(applyWatermarks);
-            }
-        }, { passive: true });
-        applyWatermarks();
-    }
-
     /* --- 2d. Scroll progress bar --- */
     const progressBar = document.querySelector('.scroll-progress');
     let progressTicking = false;
